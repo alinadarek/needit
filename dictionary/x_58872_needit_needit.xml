@@ -2,26 +2,27 @@
     <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="e4735b3947960710c0b9cbb9316d43d2" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
         <element choice="1" default="legal_1" label="What needed" mandatory="true" max_length="255" name="what_needed" type="choice">
             <choice>
-                <element inactive_on_update="false" label="LEGAL 1" sequence="4" value="legal_1"/>
                 <element inactive_on_update="false" label="FINANCE 2" sequence="7" value="finance_2"/>
-                <element inactive_on_update="false" label="FACILITIES 2" sequence="3" value="facilities_2"/>
-                <element inactive_on_update="false" label="FINANCE 1" sequence="6" value="finance_1"/>
-                <element inactive_on_update="false" label="FACILITIES 1" sequence="2" value="facilities_1"/>
                 <element inactive_on_update="false" label="LEGAL 2" sequence="5" value="legal_2"/>
+                <element inactive_on_update="false" label="FINANCE 1" sequence="6" value="finance_1"/>
                 <element inactive_on_update="false" label="HR 2" sequence="1" value="hr_2"/>
+                <element inactive_on_update="false" label="FACILITIES 1" sequence="2" value="facilities_1"/>
+                <element inactive_on_update="false" label="FACILITIES 2" sequence="3" value="facilities_2"/>
+                <element inactive_on_update="false" label="LEGAL 1" sequence="4" value="legal_1"/>
                 <element inactive_on_update="false" label="HR 1" sequence="0" value="hr_1"/>
             </choice>
         </element>
         <element label="Requested for" mandatory="true" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
         <element choice="1" default="legal" label="Request type" mandatory="true" max_length="255" name="request_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Finance" sequence="3" value="finance"/>
                 <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
                 <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Finance" sequence="3" value="finance"/>
                 <element inactive_on_update="false" label="Human resources" sequence="0" value="hr"/>
             </choice>
         </element>
-        <element label="Other" max_length="40" name="other" type="string"/>
         <element label="When needed" mandatory="true" max_length="255" name="when_needed" type="glide_date_time"/>
+        <element label="Other" max_length="40" name="other" type="string"/>
+        <element label="Email" mandatory="true" max_length="40" name="requested_for_email" type="string"/>
     </element>
 </database>
